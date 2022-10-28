@@ -12,13 +12,14 @@ import javafx.collections.ObservableList;
  * @author am199
  */
 public class Digimon {
-    private int id;
+    private int _id;
     private String Nombre;
     private String evDe;
     private String Emblema;
     private String Tipo;
 
-    public Digimon(String Nombre, String evDe, String Emblema, String Tipo) {
+    public Digimon( int _id, String Nombre, String evDe, String Emblema, String Tipo) {
+        this._id = _id;
         this.Nombre = Nombre;
         this.evDe = evDe;
         this.Emblema = Emblema;
@@ -61,6 +62,14 @@ public class Digimon {
 
     public void setTipo(String Tipo) {
         this.Tipo = Tipo;
+    }
+
+    public int get_id() {
+        return _id;
+    }
+
+    public void set_id(int id) {
+        this._id = _id;
     }
         
     

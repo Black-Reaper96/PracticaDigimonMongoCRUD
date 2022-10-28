@@ -9,36 +9,47 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="625.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.digimonmongocrud.PrimaryController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="703.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.digimonmongocrud.PrimaryController">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <children>
-      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="735.0" prefWidth="651.0">
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="735.0" prefWidth="704.0">
          <children>
-            <Button layoutX="53.0" layoutY="358.0" mnemonicParsing="false" onAction="#Limpiar" prefHeight="25.0" prefWidth="58.0" text="Nuevo" />
-            <Button layoutX="140.0" layoutY="358.0" mnemonicParsing="false" onAction="#Guardar" text="Guardar" />
-            <Button layoutX="223.0" layoutY="358.0" mnemonicParsing="false" text="Cancelar" />
-            <Button layoutX="313.0" layoutY="358.0" mnemonicParsing="false" text="Modificar" />
-            <Button layoutX="407.0" layoutY="358.0" mnemonicParsing="false" text="Eliminar" />
-            <TableView fx:id="tabla" layoutX="25.0" layoutY="407.0" onMouseClicked="#mostrarDatosTabla" prefHeight="171.0" prefWidth="597.0">
+            <Button fx:id="nuevo" layoutX="148.0" layoutY="412.0" mnemonicParsing="false" onAction="#Limpiar" prefHeight="25.0" prefWidth="58.0" text="Nuevo" />
+            <Button fx:id="guardar" layoutX="81.0" layoutY="412.0" mnemonicParsing="false" onAction="#Guardar" text="Guardar" visible="false" />
+            <Button fx:id="cancelar" layoutX="223.0" layoutY="412.0" mnemonicParsing="false" onAction="#Cancelar" text="Cancelar" visible="false" />
+            <Button fx:id="modificar" disable="true" layoutX="369.0" layoutY="412.0" mnemonicParsing="false" onAction="#Modificar" text="Modificar" />
+            <Button fx:id="eliminar" disable="true" layoutX="463.0" layoutY="412.0" mnemonicParsing="false" onAction="#Eliminar" text="Eliminar" />
+            <TableView fx:id="tabla" layoutX="11.0" layoutY="458.0" onMouseClicked="#mostrarDatosTabla" prefHeight="171.0" prefWidth="682.0">
                <columns>
-                  <TableColumn fx:id="colNombre" prefWidth="174.0" text="Nombre" />
-                  <TableColumn fx:id="colEvDe" prefWidth="168.0" text="Evoluciona de" />
-                  <TableColumn fx:id="colEmblema" prefWidth="135.0" text="Emblema" />
-                  <TableColumn fx:id="colTipo" prefWidth="119.0" text="Tipo" />
+                  <TableColumn fx:id="colNombre" prefWidth="120.00006008148193" text="Nombre" />
+                  <TableColumn fx:id="colEvDe" prefWidth="148.80003356933594" text="Evoluciona de" />
+                  <TableColumn fx:id="colEmblema" prefWidth="182.39996337890625" text="Emblema" />
+                  <TableColumn fx:id="colTipo" prefWidth="130.4000244140625" text="Tipo" />
+                  <TableColumn fx:id="colID" prefWidth="94.39996337890625" text="Id" />
                </columns></TableView>
-            <TextField fx:id="nombre" layoutX="175.0" layoutY="168.0" />
-            <TextField fx:id="evDe" layoutX="175.0" layoutY="210.0" />
-            <TextField fx:id="emblema" layoutX="175.0" layoutY="257.0" />
-            <Label layoutX="70.0" layoutY="172.0" text="Nombre" />
-            <Label layoutX="70.0" layoutY="214.0" text="Evoluciona de" />
-            <Label layoutX="69.0" layoutY="309.0" text="Tipo" />
-            <Label layoutX="67.0" layoutY="261.0" text="Emblema" />
-            <ChoiceBox fx:id="tipo" layoutX="174.0" layoutY="305.0" prefWidth="150.0" />
+            <TextField fx:id="nombre" disable="true" layoutX="275.0" layoutY="230.0" />
+            <TextField fx:id="evDe" disable="true" layoutX="275.0" layoutY="272.0" />
+            <TextField fx:id="emblema" disable="true" layoutX="275.0" layoutY="319.0" />
+            <Label layoutX="170.0" layoutY="234.0" text="Nombre" />
+            <Label layoutX="170.0" layoutY="276.0" text="Evoluciona de" />
+            <Label layoutX="169.0" layoutY="371.0" text="Tipo" />
+            <Label layoutX="167.0" layoutY="323.0" text="Emblema" />
+            <ChoiceBox fx:id="tipo" disable="true" layoutX="273.0" layoutY="371.0" prefWidth="150.0" />
+            <TextField fx:id="id" disable="true" layoutX="275.0" layoutY="193.0" />
+            <Label layoutX="170.0" layoutY="197.0" text="Id" />
+            <Label alignment="CENTER" layoutX="192.0" layoutY="138.0" prefHeight="35.0" prefWidth="251.0" text="Digimon" textFill="#2200ff">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="35.0" />
+               </font>
+            </Label>
                 
          </children>
       </Pane>
+      <TextField fx:id="nombre1" disable="true" />
+      <Label text="Nombre" />
    </children>
 </VBox>
