@@ -1,0 +1,19 @@
+[{
+  "_id": 1,
+  "nombre": "Agumon",
+  "evDe": "Koromon",
+  "emblema": "Valor",
+  "tipo": "Vacuna"
+},{
+  "_id": 0,
+  "nombre": "Koromon",
+  "evDe": "Botamon",
+  "emblema": "Valor",
+  "tipo": "Vacuna"
+},{
+  "_id": 2,
+  "nombre": "Greymon",
+  "evDe": "Agumon",
+  "emblema": "Valor",
+  "tipo": "Vacuna"
+}]
